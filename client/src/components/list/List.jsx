@@ -1,10 +1,11 @@
 import React from 'react'
-import './FeatureProduct.scss'
-import Card from "../card/Card";
-const FeatureProducts = ({ type }) => {
+import './list.scss'
+import Card from '../card/Card'
+
+const List = () => {
     const data = [
         {
-            id: 0,
+            id: 1,
             img: "https://source.unsplash.com/xw5cQNbky5A",
             img2: 'https://source.unsplash.com/YsiSAp3ccvk',
             title: "title",
@@ -15,7 +16,7 @@ const FeatureProducts = ({ type }) => {
 
         },
         {
-            id: 1,
+            id: 2,
             img: "https://source.unsplash.com/2UTk-Nip5aM",
             title: "title",
             isNew: true,
@@ -25,7 +26,7 @@ const FeatureProducts = ({ type }) => {
 
         },
         {
-            id: 2,
+            id: 3,
             img: "https://source.unsplash.com/3MvlGhagq4E",
             title: "title",
             isNew: true,
@@ -35,7 +36,7 @@ const FeatureProducts = ({ type }) => {
 
         },
         {
-            id: 3,
+            id: 4,
             img: "https://source.unsplash.com/yQTCPf-AnUY",
             title: "title",
             isNew: true,
@@ -43,28 +44,13 @@ const FeatureProducts = ({ type }) => {
             price: 12,
 
 
-        }
-
+        },
 
 
     ];
-
     return (
-        <div className='featuredProducts'>
-            <div className="top">
-                <h1>{type} products</h1>
-                <p>  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Donec auctor libero justo, vel finibus justo tempor vitae.
-                    Sed gravida varius gravida.</p>
-            </div>
-            <div className="bottom">
-                {data?.map(item => (
-                    <Card item={item} key={item.id} />
-                ))}
-
-            </div>
-        </div>
+        <div className='list'>{data?.map(item => (<Card item={item} key={item.id} />))}</div>
     )
 }
 
-export default FeatureProducts
+export default List
