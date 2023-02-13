@@ -9,12 +9,12 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
-    "@strapi/strapi": "4.6.1",
-    "@strapi/plugin-users-permissions": "4.6.1",
     "@strapi/plugin-i18n": "4.6.1",
-    "mysql": "2.18.1"
+    "@strapi/plugin-users-permissions": "4.6.1",
+    "@strapi/strapi": "4.6.1",
+    "mysql": "2.18.1",
+    "stripe": "^11.10.0"
   },
   "author": {
     "name": "A Strapi developer"
